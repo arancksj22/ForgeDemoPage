@@ -44,30 +44,26 @@
   font-weight: 600;
 }
 
-.status-indicator {
+.made-by {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.625rem 1.25rem;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  border-radius: 8px;
-  font-size: 0.875rem;
-  color: var(--forge-success);
-  font-weight: 600;
+  gap: 0.6rem;
+  font-size: 1rem;
+  color: #e2e8f0;
+  font-weight: 500;
 }
 
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--forge-success);
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
+.heart-icon {
+  width: 18px;
+  height: 18px;
+  color: #ef4444;
+  animation: heartbeat 1.5s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(1.1); }
+  20%, 40% { transform: scale(1); }
 }
 
 /* ===== SOCIAL LINKS ===== */
@@ -78,8 +74,8 @@
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,8 +89,8 @@
 }
 
 .social-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
 }
 
 .social-icon:hover {
