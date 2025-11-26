@@ -1,0 +1,72 @@
+<div class="forge-container">
+  <!-- Animated background grid -->
+  <div class="bg-grid"></div>
+  <div class="bg-gradient"></div>
+  
+  <!-- Header -->
+  <app-header />
+
+  <!-- Main Content -->
+  <main class="forge-main">
+    <!-- Hero Text -->
+    <div class="hero-statement">
+      <h2>No Docker. No Setup. No "Works on My Machine."</h2>
+      <p>Upload your project zip. We handle the rest. Consistent builds, every time, anywhere.</p>
+    </div>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <div class="section-header">
+        <h2>Deploy Build</h2>
+        <p>Upload your project source and let Forge handle the rest</p>
+      </div>
+
+      <app-upload-section />
+
+      <app-repo-link />
+    </section>
+
+    <!-- Build Queue Section -->
+    <section class="queue-section">
+      <div class="section-header">
+        <h2>Build Pipeline</h2>
+        <p>Architecture flow and real-time status</p>
+      </div>
+
+      <app-architecture />
+
+      <app-build-status />
+    </section>
+  </main>
+
+  <!-- Build Output Section (Full Width) -->
+  <section class="build-output-section">
+    <div class="output-header">
+      <div class="output-title">
+        <svg class="output-icon" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 10l3 3-3 3M12 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h3>Build Output</h3>
+        <span class="output-live-badge">
+          <span class="live-dot"></span>
+          LIVE
+        </span>
+      </div>
+      <button class="btn-clear">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" 
+                stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="output-console">
+      <!-- Build output will be populated from backend -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <app-footer />
+</div>
+
