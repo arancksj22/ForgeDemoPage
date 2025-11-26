@@ -14,4 +14,14 @@ import { ArchitectureComponent } from './components/architecture/architecture.co
   styleUrl: './app.css'
 })
 export class App {
+  showToast = false;
+
+  copyEmail() {
+    navigator.clipboard.writeText('arancksj@gmail.com').then(() => {
+      this.showToast = true;
+      setTimeout(() => {
+        this.showToast = false;
+      }, 2000);
+    });
+  }
 }

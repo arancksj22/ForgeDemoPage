@@ -9,4 +9,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  showToast = false;
+
+  copyEmail() {
+    navigator.clipboard.writeText('arancksj@gmail.com').then(() => {
+      this.showToast = true;
+      setTimeout(() => {
+        this.showToast = false;
+      }, 2000);
+    });
+  }
 }
